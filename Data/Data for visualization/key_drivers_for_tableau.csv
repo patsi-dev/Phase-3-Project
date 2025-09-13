@@ -1,0 +1,16 @@
+Feature_Name,Importance_Score
+Doctor's Recommendation,0.7237803044909742
+h1n1_opinion_score,0.6851786233269306
+race_Hispanic,0.4803912613535565
+race_Other or Multiple,0.3143802119394182
+Healthcare Worker Status,0.30008432167767557
+Education: College Graduate,0.2552112233147186
+race_White,0.25128697805630335
+Age: 65+ Years,0.22620166055093438
+Level of Concern About H1N1,0.17716231582047995
+marital_status_Not Married,-0.15298248774472306
+sex_Male,0.1435403742908333
+age_group_55 - 64 Years,0.12294100894576722
+age_group_45 - 54 Years,-0.11602309040396121
+age_group_35 - 44 Years,-0.11402662467996828
+"Income: > $75,000",0.1033272016502865
