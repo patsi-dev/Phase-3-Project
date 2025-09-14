@@ -1,0 +1,11 @@
+Feature_Name,Importance_Score,Impact_Type
+Doctor's Recommendation,0.7237803044909742,Increases Vaccination
+h1n1_opinion_score,0.6851786233269306,Increases Vaccination
+race_Hispanic,0.4803912613535565,Increases Vaccination
+race_Other or Multiple,0.3143802119394182,Increases Vaccination
+Healthcare Worker Status,0.30008432167767557,Increases Vaccination
+marital_status_Not Married,-0.15298248774472306,Decreases Vaccination
+age_group_45 - 54 Years,-0.11602309040396121,Decreases Vaccination
+age_group_35 - 44 Years,-0.11402662467996828,Decreases Vaccination
+education_< 12 Years,-0.06372985926429875,Decreases Vaccination
+household_children,-0.04483942880960561,Decreases Vaccination

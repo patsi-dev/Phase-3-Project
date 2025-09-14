@@ -1,0 +1,5 @@
+Feature_Name,Importance_Score,Impact_Type
+Doctor's Recommendation,0.7237803044909742,Increases Vaccination
+Healthcare Worker Status,0.30008432167767557,Increases Vaccination
+Level of Concern About H1N1,0.17716231582047995,Increases Vaccination
+household_children,-0.04483942880960561,Decreases Vaccination
