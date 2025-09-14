@@ -1,6 +1,10 @@
 # Predicting H1N1 Vaccine Uptake
 
-# ✨ **Business Understanding**
+# ✨ Overview of the Project 
+
+This project created a data-driven strategy to increase H1N1 vaccination rates by using a reliable binary classification model. The model predicted whether a person was likely to get vaccinated based on a survey of their `opinions`, `behaviors`, and `demographics.` The insights from this model can be used to help public health agencies design more `effective`, targeted vaccination campaigns.
+
+# 🧑‍⚕️ Business and Data Understanding 
 
 ## Introduction
 
@@ -10,106 +14,45 @@ For this study, we are using data from a survey conducted in 2009 during the H1N
 
 The survey was used to understand the uptake of both vaccines. These included respondents sharing information on their health conditions, demographics, risk perception, and behaviours. By analyzing this dataset, we can better understand which factors influenced vaccine uptake. These insights can help healthcare professionals design more effective, targeted campaigns to improve vaccine acceptance and coverage in future pandemics.
 
+**Stakeholder Audience:** The primary stakeholder for this project was a public healthcare organization.
+
 ## Problem Statement
 
 * Public health agencies face the challenge of running vaccination campaigns with limited resources. A general, untargeted approach is inefficient and does not effectively address the unique factors that influence vaccination in different groups of people.
   
 * The key challenge is the lack of a proactive approach to identifying individuals who are least likely to get vaccinated, and understanding the specific reasons behind their choices. This results in lower vaccination rates and poses a greater risk to public health.
 
-## Objectives
+## Dataset Choice 
 
-* **Predict Vaccine Acceptance:** Create a classification model to predict whether a person will receive the H1N1 vaccine based on their past behavior.
+The dataset used for this project was from the National 2009 H1N1 Flu Survey (NHFS), conducted by the Centers for Disease Control and Prevention (CDC). This dataset was suitable because it contained various predictors that displayed the factors influencing a person's decision to get vaccinated, such as `opinions`, `behaviors`, `demographics`, and `external influences` like a `doctor's recommendation`.
 
-* **Identify At-Risk Populations:** Accurately segment the population to predict which individuals are highly likely to remain unvaccinated for H1N1.
+# 🧹 Data Cleaning 
 
-* **Understand Key Drivers:** Determine the most influential factors, such as opinions, behaviors, and demographics, that predict vaccine hesitancy and acceptance.
+The initial data exploration revealed that many columns had missing values, with some columns having extreme numbers of nulls. For example, `employment_industry`, `employment_occupation`, and `health_insurance` were missing over 12,000 entries each. To avoid losing a lot of useful data, a strategic approach to handling these missing values was necessary instead of simply dropping the rows.
 
-* **Compare Model Performance:** Evaluate and compare different machine learning models to find the most effective technique for vaccine uptake prediction.
+# ⚙️ Modeling Approach 
 
-# 📊 Dataset
+The project aimed to build a binary classification model to predict whether a person would receive the H1N1 vaccine. The goal was to compare the performance of different machine learning models, such as Logistic regression and Random forest to determine the most effective technique for vaccine uptake prediction. The success of the model was measured by its ability to achieve a recall above **0.70** while maintaining a good balance between **precision** and **recall**.
 
-The dataset is from the National 2009 H1N1 Flu Survey (NHFS), publicly available from the Centers for Disease Control and Prevention (CDC). It contains survey responses from 26,707 individuals in the U.S., with each row detailing a person's attitudes, beliefs, and behaviors toward the H1N1 and seasonal flu vaccines. The data includes:
+# 📈 Evaluation 
 
-* `Opinions & Knowledge:` Perceived risk, effectiveness, and side effects.
+The evaluation of the model focused on:
 
-* `Behaviors:` Such as face mask use, hand washing, and avoidance of large gatherings.
+* **Model Performance:** The model was considered successful if it achieved a recall score above `0.70`.
 
-* `Demographics:` Including age, income, race, health insurance, and geographic region.
+* **Actionable Insights:** Success also included providing clear insights into the factors that were the strongest predictors of vaccine acceptance and hesitancy, which could be explained to stakeholders.
 
-* `External Influence:` Doctor's recommendations and employment in healthcare.
+# 🎯 Conclusion 
 
-# 💻 Methodology
+Machine learning models were applied to predict H1N1 and seasonal flu vaccine uptake using demographic, health, and behavioral data.
 
-This project follows a standard data science methodology:
+- Key predictors included `doctor recommendations,` `risk perception,` and `knowledge levels`.
 
-**Data Loading and Merging:** The features and target datasets were loaded and merged based on respondent_id. The resulting dataset has 26,707 rows and 38 columns.
+- The models achieved reasonable accuracy, showing potential to identify groups unlikely to vaccinate.
 
-**Exploratory Data Analysis (EDA):** The data was inspected for types, non-null counts, and missing values. It was noted that several columns, including employment_industry, employment_occupation, and health_insurance, have a high percentage of missing values, which will require a smart imputation strategy.
+- Insights can guide `targeted public health campaigns,` `better resource allocation,` and `improved pandemic preparedness.`
 
-**Data Preprocessing and Modeling:**
+- Results are limited to the 2009 H1N1 context and require cautious, ethical application to avoid bias or stigmatization.
 
-* Missing values will be handled using an imputation method.
+Overall, predictive modeling is a valuable decision-support tool for enhancing vaccination strategies and strengthening public health resilience.
 
-* The data will be split into training and testing sets.
-
-* Categorical features will be one-hot encoded, and numerical features will be scaled.
-
-* Classification models, such as Logistic Regression and Random Forest Classifier, will be trained and evaluated.
-
-**Model Evaluation and Interpretation:** The models will be evaluated based on a recall score greater than 0.70 while maintaining a good balance with precision. The goal is to provide actionable insights by identifying the most influential features.
-
-# 📈 Visualizations
-
-<img width="684" height="395" alt="image" src="https://github.com/user-attachments/assets/3bcc5924-fcc3-4509-8c05-98c309064f10" />
-
-<img width="688" height="332" alt="image" src="https://github.com/user-attachments/assets/e89b4eb2-4f8b-4221-9b84-3cb2e471092b" />
-
-<img width="540" height="494" alt="image" src="https://github.com/user-attachments/assets/16d90913-b902-4530-9524-6c696691bc54" />
-
-<img width="395" height="315" alt="image" src="https://github.com/user-attachments/assets/c0a9e07a-cb1a-400c-bc36-ebd359128cb0" />
-
-
-
-# 🏁 Conclusion
-
-
-* Key predictors included doctor recommendations, risk perception, and knowledge levels.
-
-* The models achieved reasonable accuracy, showing potential to identify groups unlikely to vaccinate.
-
-* Insights can guide targeted public health campaigns, better resource allocation, and improved pandemic preparedness.
-
-* Results are limited to the 2009 H1N1 context and require cautious, ethical application to avoid bias or stigmatization.
-
-  
-
-# 💡 Business Recommendations
-
-Based on the model's insights, the public healthcare organization can:
-
-* Target outreach programs to demographic groups identified as at-risk or vaccine-hesitant.
-
-* Focus on key influential factors, such as increasing public knowledge about vaccine effectiveness and promoting doctor recommendations, to improve vaccination rates.
-
-* Allocate resources more efficiently by concentrating on the segments of the population most likely to remain unvaccinated.
-
-# ➡️ Next Steps
-
-* Explore more advanced feature engineering techniques to improve model performance.
-
-* Investigate different machine learning models and ensemble methods (e.g., Gradient Boosting) to see if they can achieve better recall and precision scores.
-
-
-# 🔧 Technologies Implemented
-
-* Python
-
-* Pandas
-
-* NumPy
-
-* Matplotlib
-
-* Seaborn
-
-* Scikit-learn
